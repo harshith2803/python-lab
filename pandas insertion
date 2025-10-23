@@ -1,0 +1,75 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPanSsUTdnocHUntE9osIWS",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/harshith2803/python-lab/blob/main/pandas%20insertion\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SeIZpJcni5h5",
+        "outputId": "3e79b7ea-5ccb-4412-9b8e-bc9abc3a6b4b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "        name  score  attempts qualify  age\n",
+            "a   harshith   12.5         1     yes   21\n",
+            "b     nithin    9.0         3      no   20\n",
+            "c   bhupathi   16.5         2     yes   19\n",
+            "d       nani    NaN         3      no   20\n",
+            "e     charan    9.0         2      no   21\n",
+            "f  prashanth   20.0         3     yes   20\n",
+            "g      satya   14.5         1     yes   19\n",
+            "h      kiran    NaN         1      no   18\n",
+            "i    sathwik    8.0         2      no   21\n",
+            "j        sai   19.0         1     yes   20\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "exam_data={\n",
+        "  'name':['harshith','nithin','bhupathi','nani','charan','prashanth','satya','kiran','sathwik','sai'],\n",
+        "    'score':[12.5,9,16.5,np.nan,9,20,14.5,np.nan,8,19],\n",
+        "    'attempts':[1,3,2,3,2,3,1,1,2,1],\n",
+        "  'qualify':['yes','no','yes','no','no','yes','yes','no','no','yes'],\n",
+        "\n",
+        "}\n",
+        "labels=['a','b','c','d','e','f','g','h','i','j']\n",
+        "df=pd.DataFrame(exam_data,index=labels)\n",
+        "df['age']=[21,20,19,20,21,20,19,18,21,20]\n",
+        "print(df)\n"
+      ]
+    }
+  ]
+}
